@@ -52,6 +52,15 @@ header {
     color: #3d409a;
     font-weight: 400;
 }
-.caixa-texto{
 
+.center{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+}
+.center h2{
+    font-size: 40px;
+    text-decoration: none;
 }
