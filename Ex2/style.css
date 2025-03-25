@@ -1,0 +1,85 @@
+@font-face {
+    font-family: "persona";
+    src: url("../fonts/Persona5MenuFontPrototype-Regular.ttf");
+}
+
+body{
+    background: url("../imagens/642016.png");
+    padding-top: 50px;
+    height: 100vh;
+    margin: 0;
+    /*overflow: hidden;*/
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    font-family: "persona";
+}
+
+.logo h1{
+    color: black;
+}
+
+.logo a:link{
+    color:black;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.logo a:visited{
+    color:black;
+    background-color: transparent;
+    text-decoration: none;
+}
+.logo a:active{
+    color:black;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    color: black;
+    font-family: "persona";
+}
+
+ul a:link{
+    color:black;
+    background-color: transparent;
+    text-decoration: none;
+    font-size: larger;
+}
+
+ul a:visited{
+    color:black;
+    background-color: transparent;
+    text-decoration: none;
+    font-size: larger;
+}
+
+ul a:active{
+    color:black;
+    background-color: transparent;
+    text-decoration: none;
+    font-size: larger;
+}
+
+main h1 {
+    font-family: "persona";
+    font-size: xx-large;
+}
+main img {
+    margin: auto;
+    display: block;
+    width: 20%;
+}
+
+main p{
+    font-family: "persona";
+    font-size:xx-large;
+}
+
+main i{
+    font-family: "persona";
+}
