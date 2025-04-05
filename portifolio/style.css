@@ -50,23 +50,116 @@ header{
     height: 700px;
     background-color: black;
 }
+.section2 p{
+    color: white;
+    text-align: center;
+}
 .section3{
     transform:translate(5%, 15%);
     width: 1700px;
     height: 700px;
     background-color: black;
     color: white;
-}
-.texto{
     text-align: center;
 }
-.section3 ul{
-    list-style: none;
+.container{
+    transform: translate(42%, 30%);
 }
 .container ul li{
     width: 200px;
     height: 35px;
     display: flex;
     align-items: center;
+    margin: 1.5em;
+    cursor: pointer;
+    padding: 1em;
+    background: rgb(43, 43, 43);
+    position: relative;
+    color: white;
+    border-radius: 5px;
 }
 
+.container ul li::before,
+.container ul li::after{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    border-radius: 5px;
+    width: 105%;
+    transition: all 0.4s;
+}
+.container ul li::before{
+    left: 0%;
+    height: 130%;
+    background: linear-gradient(to right, #021B79, #0575E6);
+}
+.container ul li::after{
+    left: -10%;
+    height: 120%;
+    background: #ffffff56;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.164);
+}
+.container ul li:hover::before{
+    transform: translateX(-2.5%);
+}
+.container ul li:hover::after{
+    transform: translateX(15%);
+}
+.box{
+    width: 300px;
+    border-bottom: 20px solid #03a9f4;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    transform: translate(200%, 20%);
+}
+.box h2{
+    color: #fff;
+    background: #03a9f4;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: 700;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.box ul{
+    position: relative;
+    background: #fff;
+}
+.box ul:hover li{
+    opacity: 0.2;
+}
+.box ul li{
+    list-style: none;
+    padding: 10px;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s;
+}
+.box ul li:hover{
+    transform: scale(1.1);
+    z-index: 5;
+    background: #25bcff;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    opacity: 1;
+}
+.box ul li span{
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    background: #25bcff;
+    color: #fff;
+    display: inline-block;
+    border-radius: 50%;
+    margin-right: 10px;
+    font-size: 12px;
+    font-weight: 600;
+    transform: translateY(-2px);
+}
+.box ul li:hover span{
+    background: #fff;
+    color: #25bcff;
+}
