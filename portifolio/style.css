@@ -54,6 +54,11 @@ header{
     color: white;
     text-align: center;
 }
+.section2 h3{
+    color: white;
+    text-align: center;
+    transform: translateY(300%);
+}
 .section3{
     transform:translate(5%, 15%);
     width: 1700px;

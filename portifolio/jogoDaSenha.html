@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./style2.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Game</title>
+    <script id="game" src="script.js"></script>
+</head>
+<body>
+    <main>
+        <div class="bg-image"></div>
+
+        <div class="instruction">
+            <h1>Jogo da Senha</h1>
+            <p>
+                O objetivo desse jogo é você adivinhar um senha de 6 digitos aleatorios<br>
+                num total de 10 tentativas, no histórico vai ser mostrado as suas tentativas<br>
+                e o números de digitos acertados e errados. Então vai querer tentar? 
+            </p>
+        </div>
+        <div class="box-input">
+            <label>Resposta: </label>
+            <input type="text" id="res" name="res" maxlength="6"/>
+            <button id="sendRes" type="button" onclick="verificandoResposta()">Verificar</button>
+        </div>
+
+        <div class="history">
+            <h3 id="resultados">Histórico</h3>
+            <ul id="tentativas" reversed></ul>
+        </div>
+    </main>
+</body>
+</html>
