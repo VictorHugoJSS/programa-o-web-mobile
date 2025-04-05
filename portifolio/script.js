@@ -13,7 +13,7 @@ if (window.location.href === window.location.origin + "/portifolio/jogoDaSenha.h
     }
 
     const codigo = GenerateCode();
-    let tentativas = 0;
+    let anteriores = 0;
 
     function verificandoAcertosErros(pass, resposta){
         let numCertos = 0;
@@ -42,7 +42,7 @@ if (window.location.href === window.location.origin + "/portifolio/jogoDaSenha.h
         else{
             anterior.appendChild(tentativaPassada);
         }
-        tentativas++;
+        anteriores++;
     }
 
     function verificandoResposta(){
@@ -51,7 +51,7 @@ if (window.location.href === window.location.origin + "/portifolio/jogoDaSenha.h
         let arr = res.split('');
         const { numCertos, numErrados } = verificandoAcertosErros(pas, arr);
         History(res, numCertos, numErrados);
-        if (acertos === 6 && tentativas <= 10){
+        if (acertos === 6 && anteriores <= 10){
             alert("Você acertou!!!");
             alert("Deseja jogar novamente? (Pressione F5 para reiniciar)");
         }
