@@ -52,13 +52,10 @@ if (window.location.href === window.location.origin + "/portifolio/jogoDaSenha.h
         const { numCertos, numErrados } = verificandoAcertosErros(pas, arr);
         History(res, numCertos, numErrados);
         if (numCertos === 6 && anteriores <= 10){
-            alert("Você acertou!!!");
-            alert("Deseja jogar novamente? (Pressione F5 para reiniciar)");
+            alert("Você acertou!!!\nDeseja jogar novamente? (Pressione F5 para reiniciar)");
         }
-        else if (tentativas > 10){
-            alert("Que pena. Você perdeu! :( ");
-            alert("A resposta era: " + codigo);
-            alert("Deseja jogar novamente? (Pressione F5 para reiniciar)");
+        else if (anteriores > 10){
+            alert("Que pena. Você perdeu! :( " + "\nA resposta era: " + codigo + "\nDeseja jogar novamente? (Pressione F5 para reiniciar)");
         }
     }
 }
