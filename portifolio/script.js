@@ -51,7 +51,7 @@ if (window.location.href === window.location.origin + "/portifolio/jogoDaSenha.h
         let arr = res.split('');
         const { numCertos, numErrados } = verificandoAcertosErros(pas, arr);
         History(res, numCertos, numErrados);
-        if (acertos === 6 && anteriores <= 10){
+        if (numCertos === 6 && anteriores <= 10){
             alert("Você acertou!!!");
             alert("Deseja jogar novamente? (Pressione F5 para reiniciar)");
         }
