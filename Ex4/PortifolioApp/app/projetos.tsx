@@ -4,7 +4,12 @@ export default function Projetos(){
     
     return (
         <View style={style.fundo}>
-            <Text></Text>
+            <Text>
+                Projetos feito na universidade:
+                {'\n'}Flavourit
+                {'\n'}Labirinto POO
+                {'\n'}Portal de Extensão da Unicap
+            </Text>
         </View>
     );
 }
