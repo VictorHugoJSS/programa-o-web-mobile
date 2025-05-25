@@ -29,7 +29,7 @@ export default function Index() {
   return (
     <View style={style.container}>
 
-      <Text style={style.colorText}>Menu</Text>
+      <Text style={[style.colorText, {top:-40}, {fontSize: 40}, {justifyContent:'center'}, {alignItems:'center'}]}>Menu</Text>
       <View style={{top:20}}>
         <Pressable onPress={() => navigation.navigate("/about")} onPressIn={handlePress} onPressOut={handleRelease}>
           <Animated.View style={[button.container, {backgroundColor}]}>
@@ -39,9 +39,33 @@ export default function Index() {
       </View>
 
       <View style={{top:40}}>
-        <Pressable onPress={() => navigation.navigate("/Academic")} onPressIn={handlePress} onPressOut={handleRelease}>
+        <Pressable onPress={() => navigation.navigate("/experiencias")} onPressIn={handlePress} onPressOut={handleRelease}>
           <Animated.View style={[button.container, {backgroundColor}]}>
-            <Text style={button.buttonText}>Academico</Text>
+            <Text style={button.buttonText}>Experiencias Academica</Text>
+          </Animated.View>
+        </Pressable>
+      </View>
+
+      <View style={{top:60}}>
+        <Pressable onPressIn={handlePress} onPressOut={handleRelease} onPress={() => navigation.navigate("/projetos")}>
+          <Animated.View style={[button.container, {backgroundColor}]}>
+            <Text style={button.buttonText}>Projetos</Text>
+          </Animated.View>
+        </Pressable>
+      </View>
+
+      <View style={{top:80}}>
+        <Pressable onPressIn={handlePress} onPressOut={handleRelease} onPress={() => navigation.navigate("/Jogo")}>
+          <Animated.View style={[button.container, {backgroundColor}]}>
+            <Text style={button.buttonText}>Jogo</Text>
+          </Animated.View>
+        </Pressable>
+      </View>
+      
+      <View style={{top:100}}>
+        <Pressable onPressIn={handlePress} onPressOut={handleRelease} onPress={() => navigation.navigate("/experienciaProfissional")}>
+          <Animated.View style={[button.container, {backgroundColor}]}>
+            <Text style={button.buttonText}>Experiencia Profissional</Text>
           </Animated.View>
         </Pressable>
       </View>
@@ -50,16 +74,13 @@ export default function Index() {
 }
 
 const navigation = useRouter();
-const theme = useColorScheme();
 const style = StyleSheet.create({
     container: {
       flex: 1,
       justifyContent: "center",
       alignItems: "center",
-      backgroundColor: theme == "dark" ? 'black':'white',
     },
     colorText:{
-      color: theme == "dark" ? 'white':'black',
       fontSize: 20,
     }
 });
@@ -67,15 +88,13 @@ const style = StyleSheet.create({
 const button = StyleSheet.create({
   container:{
     alignItems: 'center',
-    alignContent: 'center',
+    justifyContent: 'center',
     borderRadius: 33.33,
     width: 300,
     height: 50,
   },
   buttonText:{
-    top:10,
     fontSize: 20,
-    right: 10,
     color: 'white'
   },
 });

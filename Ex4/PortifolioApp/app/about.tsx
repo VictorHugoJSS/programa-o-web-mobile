@@ -1,17 +1,14 @@
 import { useRouter } from "expo-router";
 import { Animated, Pressable, StyleSheet, Text, useColorScheme, View } from "react-native";
 
-const theme = useColorScheme();
 
 const style = StyleSheet.create({
     container: {
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: theme === "dark" ? 'black' : 'white',
     },
     testStyle: {
-        color: theme === "dark" ? 'white' : 'black',
         fontSize: 20,
     }
 });
